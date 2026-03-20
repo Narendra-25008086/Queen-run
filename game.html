@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Devil Queen Runner</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div id="game">
+  <!-- Lane lines -->
+  <div class="lane-line"></div>
+  <div class="lane-line"></div>
+
+  <!-- Player -->
+  <div id="player">👸</div>
+
+  <!-- Scores -->
+  <h1 id="score">0</h1>
+  <h1 id="highScore">HighScore: 0</h1>
+
+  <!-- Game Over -->
+  <div id="gameOver">
+    <h2>💀 GAME OVER</h2>
+    <button onclick="restart()">TRY AGAIN</button>
+  </div>
+</div>
+
+<footer>
+  Created by Narendra Krishnan KS AIML |
+  <a href="https://www.linkedin.com/in/narendra-krishnan-k-s-a0646137b/" target="_blank">LinkedIn</a>
+</footer>
+
+<script src="game.js"></script>
+</body>
+</html>

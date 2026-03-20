@@ -1,0 +1,112 @@
+body {
+  margin: 0;
+  background: black;
+  color: white;
+  font-family: Arial;
+  overflow: hidden;
+}
+
+/* Intro Page */
+.intro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(black, darkred);
+  text-align: center;
+}
+
+.center-box button {
+  padding: 12px 25px;
+  background: red;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+/* Game */
+#game {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  background: #111; /* road color */
+  overflow: hidden;
+}
+
+/* Lane lines */
+.lane-line {
+  position: absolute;
+  width: 4px;
+  height: 80px;
+  background: white;
+  top: -100px;
+  animation: moveLane 1s linear infinite;
+}
+
+.lane-line:first-child { left: 33.33%; }
+.lane-line:nth-child(2) { left: 66.66%; }
+
+@keyframes moveLane {
+  0% { top: -100px; }
+  100% { top: 100vh; }
+}
+
+/* Player */
+#player {
+  position: absolute;
+  bottom: 50px;
+  font-size: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-shadow: 0 0 10px red, 0 0 20px crimson;
+  animation: run 0.3s infinite;
+}
+
+@keyframes run {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0px); }
+}
+
+/* Enemies */
+.obstacle {
+  position: absolute;
+  top: -50px;
+  font-size: 50px;
+  text-shadow: 0 0 10px purple, 0 0 20px red, 0 0 30px darkred;
+  transform: translateX(-50%);
+}
+
+/* Scores */
+#score { position: absolute; top: 10px; left: 10px; }
+#highScore { position: absolute; top: 40px; left: 10px; }
+
+/* Game Over */
+#gameOver {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+#gameOver button {
+  padding: 10px 20px;
+  background: red;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* Footer */
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
+}
+footer a { color: red; }
