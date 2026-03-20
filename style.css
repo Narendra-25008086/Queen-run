@@ -110,17 +110,15 @@ footer {
   font-size: 14px;
 }
 footer a { color: red; }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 400px) {
   #player {
-    font-size: 40px; /* smaller on mobile */
-    bottom: 20px;     /* reduce distance from bottom */
+    font-size: 35px;
+    bottom: 15px;
   }
-
   .obstacle {
-    font-size: 40px; /* adjust enemy size */
+    font-size: 35px;
   }
-
   #score, #highScore {
-    font-size: 18px; /* smaller score text */
+    font-size: 16px;
   }
 }
